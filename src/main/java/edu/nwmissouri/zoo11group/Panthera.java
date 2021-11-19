@@ -1,10 +1,11 @@
 
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.nwmissouri.zoo11group;
+package edu.nwmissouri.zoo04lab;
 
 /**
  *This Class extends Animal class
@@ -39,5 +40,34 @@ public class Panthera extends Animal {
     public void move() {
         System.out.println("I can eat and walk");
     }
-
+    public void logarithmic(){
+        double c=multiplication(4,5);
+          double x=Math.log(c);
+        System.out.println("the value of logarithamic function is " +x);
+    }
+    public int multiplication(int a, int b){
+        return a*b;
+    }
+    // exception 
+     public int exceptionex() {
+          
+        try {
+            int m = 30, n = 0;
+            int y = m/n;  
+            // cannot divide by zero
+            System.out.println ("Result = " + y);
+        }
+        catch(ArithmeticException e) {
+            System.out.println ("Can't divide a number by 0");
+        }
+    }
+    
+  public static void main(String args[]){
+      var d=new Panthera("Harshika");
+      d.speak();
+      d.move();
+      d.logarithmic();
+      d.exceptionex()
+     
+  }
 }
